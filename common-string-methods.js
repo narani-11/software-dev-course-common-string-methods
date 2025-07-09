@@ -101,3 +101,98 @@ console.log({
   firstCharacter,
   extractedBootcamp,
 });
+
+Problem 1 with solution:
+// Activity 1: Searching Strings
+let text = "Learning JavaScript is fun!";
+console.log(text.includes("JavaScript")); // true
+console.log(text.indexOf("fun"));         // 21
+
+// Activity 2: Transforming Strings
+let input = " CODE BOOTCAMP ";
+let transformed = input.trim().toLowerCase();
+let replaced = transformed.replace("bootcamp", "javascript");
+console.log(replaced); // "code javascript"
+
+// Activity 3: Breaking Apart a Sentence
+let sentence = "Coding is fun and educational";
+let words = sentence.split(" ");
+console.log(words); // ["Coding", "is", "fun", "and", "educational"]
+
+// Activity 4: Retrieving Substrings
+let word = "Bootcamp";
+console.log(word.charAt(0)); // "B"
+console.log(word.slice(4));  // "camp"
+
+// Advanced Challenge
+let data = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+
+let customerName = data.split("\n")[0].split(": ")[1];
+let orderItems = data.split("\n")[1].split(": ")[1].split(", ");
+let totalUpper = data.split("\n")[2].toUpperCase();
+
+console.log(customerName); // "John Doe"
+console.log(orderItems);   // ["Apple", "Banana", "Grape"]
+console.log(totalUpper);   // "TOTAL: $20.50"
+
+
+
+Problem 2 with solution:
+// Starter Code
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
+// 1. Searching
+let hasJavaScript = inputString.includes("JavaScript");
+let codingPosition = inputString.indexOf("Coding");
+let startsWithWelcome = inputString.trim().startsWith("Welcome"); // need trim to truly check
+let endsWithToday = inputString.trim().endsWith("today.");
+// 2. Transforming
+let lowercaseString = inputString.toLowerCase();
+let uppercaseString = inputString.toUpperCase();
+let trimmedString = inputString.trim();
+let replacedString = inputString.replace("JavaScript", "coding");
+// 3. Breaking Apart
+let wordsArray = inputString.trim().split(" ");
+// 4. Retrieving
+let firstCharacter = trimmedString.charAt(0);
+let extractedBootcamp = inputString.slice(
+  inputString.indexOf("Bootcamp"),
+  inputString.indexOf("Bootcamp") + "Bootcamp".length
+);
+// Log all results
+console.log({
+  hasJavaScript,
+  codingPosition,
+  startsWithWelcome,
+  endsWithToday,
+  lowercaseString,
+  uppercaseString,
+  trimmedString,
+  replacedString,
+  wordsArray,
+  firstCharacter,
+  extractedBootcamp,
+});
+ Explanation what I understood:
+ includes finds "JavaScript"
+ indexOf finds where "Coding" starts
+ startsWith & endsWith  trim first to remove extra spaces
+ toLowerCase, toUpperCase, trim, replace modify the string
+ split(" ") breaks into words
+ charAt(0) grabs first character
+ slice extracts "Bootcamp" precisely by finding the start index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
